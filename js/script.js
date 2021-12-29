@@ -120,12 +120,35 @@
 // console.log(myArr5);
 
 /*          Objects         */
-const myObj = {
-  name: 'Nizam',
-  age: '29',
-  hobbies: ['playing', 'cricket', 'like Tinnes'],
-};
+// const myObj = {
+//   name: 'Nizam',
+//   age: '29',
+//   hobbies: ['swimming', 'cricket', 'Tinnes'],
+//   'education degrees': 'BSCS (Hons)', // for space between property of object use single quate
+// };
 // console.log(myObj);
 // console.log(myObj.name);
-myObj.gender = 'Male'; // Add new value in object
-console.log(myObj);
+// myObj.gender = 'Male'; // Add new value in object
+// console.log(myObj['education degrees']);
+
+// const key = 'email';
+// myObj[key] = 'nizamuddin4493@gmial.com'; // to add the value of key as object property
+// console.log(myObj);
+
+/*      object iterate      */
+// for (const i of myObj) {
+//   // console.log(i); //show the properties
+//   console.log(myObj[i]); //shows the value of property
+//   console.log(`${i} : ${myObj[i]}`); //shows properties and value
+// }
+
+/*      computed Properties   */
+const key1 = 'value1';
+const val1 = 'abc';
+const key2 = 'value2';
+const val2 = 'xyz';
+const myObj2 = {
+  [key1]: val1,
+  [key2]: val2,
+};
+console.log(myObj2);
