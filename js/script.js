@@ -118,3 +118,14 @@
 // console.log(val1);
 // console.log(val2);
 // console.log(myArr5);
+
+/*          Objects         */
+const myObj = {
+  name: 'Nizam',
+  age: '29',
+  hobbies: ['playing', 'cricket', 'like Tinnes'],
+};
+// console.log(myObj);
+// console.log(myObj.name);
+myObj.gender = 'Male'; // Add new value in object
+console.log(myObj);
