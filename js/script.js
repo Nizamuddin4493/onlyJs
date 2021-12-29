@@ -89,3 +89,32 @@
 //     }
 //     console.log(i);
 // }
+
+/*      Array           */
+// let myArr = ['Hey', 'I am', 'Nizam', 'khan'];
+// console.log(myArr);
+// myArr.pop() // Delete at end/last item/element in Array
+// myArr.push('is the great') // Add at end/last item/element in Array.
+// myArr.shift(); // Delete at start/begining item/element in Array
+// myArr.unshift('hello'); // Add at start/begining an item/element in Array
+// let myArr2 = ['I am', 'graduate', 'of', 'computer', 'science.'];
+// let myArr3 = [];
+// myArr3.push(...myArr,...myArr2);
+// console.log(myArr3.join().toUpperCase());
+// for (i = 0; i<= myArr3.length;i++){
+//     console.log(myArr3[i]);
+// }
+// for (let myArr4 of myArr){       //give the value of array
+//     console.log(myArr4);
+// }
+// for (let index in myArr){        //give the index of array
+//     // console.log(index);
+//     console.log(myArr[index]);
+// }
+/*      array distructring      */
+// let [val1, val2] = myArr;
+// let [val1,  ,val2] = myArr;     // Use for scaping the value
+// let [val1, val2, ...myArr5] = myArr;     // creating new Arry for reminig values
+// console.log(val1);
+// console.log(val2);
+// console.log(myArr5);
