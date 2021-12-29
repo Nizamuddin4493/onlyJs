@@ -71,3 +71,21 @@
 //     default:
 //     console.log('Invalid day')
 // }
+
+/*      While Loop      */
+// let i = 0;
+// while(i <= 5) {
+//     // console.log(i);
+//     console.log(i);
+//     i++;
+// }
+// console.log(`the value of i is ${i} now`);
+
+/*      For Loop        */
+// for (let i = 0; i<= 9; i++) {
+//     if (i===5){
+//         // break;
+//         continue;
+//     }
+//     console.log(i);
+// }
