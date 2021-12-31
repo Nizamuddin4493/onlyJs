@@ -205,11 +205,36 @@
 // console.log(fname, gender);
 
 /*          Functions           */
-function fun1() {
-  console.log('Hello Function!');
-}
-fun1();
-function fun2(parameter1, parameter2) {
-  return `${parameter1} ${parameter2}`;
-}
-console.log(fun2('Hello', 'Arugument!'));
+// function fun1() {
+//   console.log('Hello Function!');
+// }
+// fun1();
+// function fun2(parameter1, parameter2) {
+//   return `${parameter1} ${parameter2}`;
+// }
+// console.log(fun2('Hello', 'Arugument!'));
+
+// function isEven(num1) {
+//   if (num1 % 2 === 0) {
+//     return 'the number is even';
+//   }
+//   return 'the number is odd';
+// }
+// console.log(isEven(3));
+
+/*        Function Experition          */
+// const fun1 = function () {
+//   console.log('Hello Function!');
+// };
+// fun1();
+
+/*        Arrow Function          */
+// const fun1 = () => {
+//   console.log('Hello Function!');
+// };
+// fun1();
+// const fun2 = (parameter1, parameter2) => `${parameter1} ${parameter2}`;
+// console.log(fun2('Hello', 'Arugument!'));
+
+const isEven = (number) => number % 2 === 0;
+console.log(isEven(3));
