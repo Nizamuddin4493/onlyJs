@@ -98,8 +98,11 @@
 // myArr.shift(); // Delete at start/begining item/element in Array
 // myArr.unshift('hello'); // Add at start/begining an item/element in Array
 // let myArr2 = ['I am', 'graduate', 'of', 'computer', 'science.'];
+/*      Array Spread operator        */
+// const myArry = [...'123456789'];
+// console.log(myArry);
 // let myArr3 = [];
-// myArr3.push(...myArr,...myArr2);
+// myArr3.push(...myArr,...myArr2);  // Push to arrays value into one by using Spread Array operator
 // console.log(myArr3.join().toUpperCase());
 // for (i = 0; i<= myArr3.length;i++){
 //     console.log(myArr3[i]);
@@ -114,7 +117,7 @@
 /*      array distructring      */
 // let [val1, val2] = myArr;
 // let [val1,  ,val2] = myArr;     // Use for scaping the value
-// let [val1, val2, ...myArr5] = myArr;     // creating new Arry for reminig values
+// let [val1, val2, ...myArr5] = myArr;     // creating new Array for reminig values
 // console.log(val1);
 // console.log(val2);
 // console.log(myArr5);
@@ -143,12 +146,60 @@
 // }
 
 /*      computed Properties   */
-const key1 = 'value1';
-const val1 = 'abc';
-const key2 = 'value2';
-const val2 = 'xyz';
-const myObj2 = {
-  [key1]: val1,
-  [key2]: val2,
-};
-console.log(myObj2);
+// const key1 = 'value1';
+// const val1 = 'abc';
+// const key2 = 'value2';
+// const val2 = 'xyz';
+// const myObj2 = {
+//   [key1]: val1,
+//   [key2]: val2,
+// };
+// console.log(myObj2);
+
+/*      Spread operator in object        */
+// const myobj1 = {
+//   key1: 'value1',
+//   key2: 'value2',
+// };
+// const myObj2 = {
+//   key3: 'value3',
+//   key4: 'value4',
+// };
+// // const myObj3 = { ...myobj1, ...myObj2 };
+// const myObj3 = { ...myobj1, ...myObj2, key5: 'value5' };
+// console.log(myObj3);
+
+/*      Object Destructuring          */
+// const myObject = {
+//   firstName: 'Nizam',
+//   lastName: 'Khan',
+//   age: 29,
+//   degree: 'BSCS Hons',
+// };
+// // const { firstName, lastName} = myObject;
+// const { firstName, lastName, ...reminObjects } = myObject;
+// console.log(firstName, lastName);
+// console.log(reminObjects);
+
+/*      Object inside Array          */
+// const users = [
+//   { userId: 1, name: 'Nizam', gender: 'male' },
+//   { userId: 2, name: 'Khan', gender: 'male' },
+//   { userId: 3, name: 'Ahmadzai', gender: 'male' },
+// ];
+// // console.log(user);
+// for (let userInfo of users) {
+//   // console.log(userInfo);
+//   console.log(userInfo.name);
+// }
+
+/*      Nested destructuring        */
+// const users = [
+//   { userId: 1, fname: 'Nizam', gender: 'male' },
+//   { userId: 2, fname: 'Khan', gender: 'male' },
+//   { userId: 3, fname: 'Tabish', gender: 'female' },
+// ];
+// // const [val1, val2] = users;
+// // console.log(val1, val2);
+// const [{ fname }, , { gender }] = users;
+// console.log(fname, gender);
