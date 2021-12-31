@@ -205,3 +205,11 @@
 // console.log(fname, gender);
 
 /*          Functions           */
+function fun1() {
+  console.log('Hello Function!');
+}
+fun1();
+function fun2(parameter1, parameter2) {
+  return `${parameter1} ${parameter2}`;
+}
+console.log(fun2('Hello', 'Arugument!'));
