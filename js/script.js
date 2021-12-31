@@ -203,3 +203,5 @@
 // // console.log(val1, val2);
 // const [{ fname }, , { gender }] = users;
 // console.log(fname, gender);
+
+/*          Functions           */
