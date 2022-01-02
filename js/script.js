@@ -249,19 +249,30 @@
 //   console.log('hello World!');
 // }
 /*        Function inside function      */
-function parentFun() {
-  function childFun1() {
-    console.log('Hello, I am child function no 1!');
-  }
-  // eslint-disable-next-line func-names
-  const childFun2 = function () {
-    console.log('Hello, I am child function no 2!');
-  };
-  const childFun3 = (num1, num2) => num1 * num2;
+// function parentFun() {
+//   function childFun1() {
+//     console.log('Hello, I am child function no 1!');
+//   }
+//   // eslint-disable-next-line func-names
+//   const childFun2 = function () {
+//     console.log('Hello, I am child function no 2!');
+//   };
+//   const childFun3 = (num1, num2) => num1 * num2;
 
-  console.log('Hello, I am Parent Fuction!');
-  childFun1();
-  childFun2();
-  console.log(childFun3(2, 3));
-}
-parentFun();
+//   console.log('Hello, I am Parent Fuction!');
+//   childFun1();
+//   childFun2();
+//   console.log(childFun3(2, 3));
+// }
+// parentFun();
+/*         Lexical Scope          */
+const lexVal1 = 'lexical variable example.';
+const lexical1 = () => {
+  const Lexical2 = () => {
+    console.log(lexVal1);
+  };
+
+  console.log(lexVal1);
+  Lexical2();
+};
+lexical1();
