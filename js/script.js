@@ -25,7 +25,7 @@
 //     }
 // }
 
-/*      if statement          */
+/* ***********   if statement  *************** */
 // let temp = 45;
 // if (temp <= 0) {
 //     console.log('It is too cool outsite.')
@@ -44,7 +44,7 @@
 // let num2 = 7;
 // let num3 = num1 >= num2 ? 'greater' : 'less then';
 
-/*      Using switch          */
+/* **************  Using switch  ************** */
 // let day = 0;
 // switch (day) {
 //     case 0:
@@ -90,7 +90,7 @@
 //     console.log(i);
 // }
 
-/*      Array           */
+/* ************   Array   ************** */
 // let myArr = ['Hey', 'I am', 'Nizam', 'khan'];
 // console.log(myArr);
 // myArr.pop() // Delete at end/last item/element in Array
@@ -122,7 +122,7 @@
 // console.log(val2);
 // console.log(myArr5);
 
-/*          Objects         */
+/* *************    Objects    ************ */
 // const myObj = {
 //   name: 'Nizam',
 //   age: '29',
@@ -131,8 +131,8 @@
 // };
 // console.log(myObj);
 // console.log(myObj.name);
-// myObj.gender = 'Male'; // Add new value in object
 // console.log(myObj['education degrees']);
+// myObj.gender = 'Male'; // Add new value in object
 
 // const key = 'email';
 // myObj[key] = 'nizamuddin4493@gmial.com'; // to add the value of key as object property
@@ -142,7 +142,7 @@
 // for (const i of myObj) {
 //   // console.log(i); //show the properties
 //   console.log(myObj[i]); //shows the value of property
-//   console.log(`${i} : ${myObj[i]}`); //shows properties and value
+//   console.log(`${i} : ${myObj[i]}`); //shows properties and value of an object
 // }
 
 /*      computed Properties   */
@@ -187,8 +187,10 @@
 //   { userId: 2, name: 'Khan', gender: 'male' },
 //   { userId: 3, name: 'Ahmadzai', gender: 'male' },
 // ];
-// // console.log(user);
-// for (let userInfo of users) {
+// // console.log(users);
+// // console.log(users[0].name);
+// // eslint-disable-next-line no-restricted-syntax
+// for (const userInfo of users) {
 //   // console.log(userInfo);
 //   console.log(userInfo.name);
 // }
@@ -201,5 +203,142 @@
 // ];
 // // const [val1, val2] = users;
 // // console.log(val1, val2);
-// const [{ fname }, , { gender }] = users;
-// console.log(fname, gender);
+// const [{ fname }, , { userId }] = users;
+// console.log(fname, userId);
+
+/*          Functions           */
+// function fun1() {
+//   console.log('Hello Function!');
+// }
+// fun1();
+// function fun2(parameter1, parameter2) {
+//   return `${parameter1} ${parameter2}`;
+// }
+// console.log(fun2('Hello', 'Arugument!'));
+
+// function isEven(num1) {
+//   if (num1 % 2 === 0) {
+//     return 'the number is even';
+//   }
+//   return 'the number is odd';
+// }
+// console.log(isEven(3));
+
+/*        Function Experition          */
+// const fun1 = function () {
+//   console.log('Hello Function!');
+// };
+// fun1();
+
+/*        Arrow Function          */
+// const fun1 = () => {
+//   console.log('Hello Function!');
+// };
+// fun1();
+// const fun2 = (parameter1, parameter2) => `${parameter1} ${parameter2}`;
+// console.log(fun2('Hello', 'Arugument!'));
+
+// const isEven = (number) => number % 2 === 0; // OR
+// // const isEven = (number) => (number % 2 === 0 ? 'even' : 'odd');
+// console.log(isEven(3));
+
+/*        Hoisting in Function         */
+// eslint-disable-next-line no-use-before-define
+// hello();
+// function hello() {
+//   console.log('hello World!');
+// }
+/*        Function inside function      */
+// function parentFun() {
+//   function childFun1() {
+//     console.log('Hello, I am child function no 1!');
+//   }
+//   // eslint-disable-next-line func-names
+//   const childFun2 = function () {
+//     console.log('Hello, I am child function no 2!');
+//   };
+//   const childFun3 = (num1, num2) => num1 * num2;
+
+//   console.log('Hello, I am Parent Fuction!');
+//   childFun1();
+//   childFun2();
+//   console.log(childFun3(2, 3));
+// }
+// parentFun();
+/*         Lexical Scope          */
+// const lexVal1 = 'lexical variable example.';
+// const lexical1 = () => {
+//   const Lexical2 = () => {
+//     console.log(lexVal1);
+//   };
+
+//   console.log(lexVal1);
+//   Lexical2();
+// };
+// lexical1();
+
+/*        Default Parameters       */
+// function defParam(a, b) {
+//   if (typeof b === 'undefined') {
+//     b = 1;
+//   }
+//   return a * b;
+// }
+// console.log(defParam(2));
+// console.log(defParam(2, 5));
+// /*        OR        */ // used in ES6
+// function defParam2(a, b = 1) {
+//   return a * b;
+// }
+// console.log(defParam2(5));
+// console.log(defParam2(5, 4));
+
+/*        Rest Parameter          */
+// function restPara(a, b, ...c) {
+//   console.log(`The value of a is ${a}`);
+//   console.log(`The value of b is ${b}`);
+//   console.log(`The value of c is ${c}`);
+// }
+// restPara(1, 2, 3, 4, 5, 6);
+
+/*        Adding all numbers of Array       */
+// function restPara(...abc) {
+//   let total = 0;
+//   // eslint-disable-next-line no-restricted-syntax
+//   for (const number of abc) {
+//     total += number;
+//   }
+//   return total;
+// }
+// console.log(restPara(1, 2, 3, 4, 5, 6));
+
+/*        Parameter destructring        */
+// const myobj = {
+//   firstName: 'Nizam',
+//   lastName: 'Khan',
+// };
+// function paraDestr({ firstName, lastName }) {
+//   console.log(firstName);
+//   console.log(lastName);
+// }
+// paraDestr(myobj);
+
+/*      Call Back Function        */
+// function myFun(name) {
+//   console.log(`Hello, my name is ${name}`);
+// }
+// function myFun2(callback) {
+//   console.log('Hello, I am is Callback Function.');
+//   callback('Nizam uddin');
+// }
+// myFun2(myFun);
+
+/*      Function returning Function        */
+function returFun() {
+  function reFun(name) {
+    return `Hello, ${name}`;
+  }
+  return reFun;
+}
+const refn = returFun();
+console.log(refn('Nizam'));
