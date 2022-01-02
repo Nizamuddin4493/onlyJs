@@ -266,13 +266,79 @@
 // }
 // parentFun();
 /*         Lexical Scope          */
-const lexVal1 = 'lexical variable example.';
-const lexical1 = () => {
-  const Lexical2 = () => {
-    console.log(lexVal1);
-  };
+// const lexVal1 = 'lexical variable example.';
+// const lexical1 = () => {
+//   const Lexical2 = () => {
+//     console.log(lexVal1);
+//   };
 
-  console.log(lexVal1);
-  Lexical2();
-};
-lexical1();
+//   console.log(lexVal1);
+//   Lexical2();
+// };
+// lexical1();
+
+/*        Default Parameters       */
+// function defParam(a, b) {
+//   if (typeof b === 'undefined') {
+//     b = 1;
+//   }
+//   return a * b;
+// }
+// console.log(defParam(2));
+// console.log(defParam(2, 5));
+// /*        OR        */ // used in ES6
+// function defParam2(a, b = 1) {
+//   return a * b;
+// }
+// console.log(defParam2(5));
+// console.log(defParam2(5, 4));
+
+/*        Rest Parameter          */
+// function restPara(a, b, ...c) {
+//   console.log(`The value of a is ${a}`);
+//   console.log(`The value of b is ${b}`);
+//   console.log(`The value of c is ${c}`);
+// }
+// restPara(1, 2, 3, 4, 5, 6);
+
+/*        Adding all numbers of Array       */
+// function restPara(...abc) {
+//   let total = 0;
+//   // eslint-disable-next-line no-restricted-syntax
+//   for (const number of abc) {
+//     total += number;
+//   }
+//   return total;
+// }
+// console.log(restPara(1, 2, 3, 4, 5, 6));
+
+/*        Parameter destructring        */
+// const myobj = {
+//   firstName: 'Nizam',
+//   lastName: 'Khan',
+// };
+// function paraDestr({ firstName, lastName }) {
+//   console.log(firstName);
+//   console.log(lastName);
+// }
+// paraDestr(myobj);
+
+/*      Call Back Function        */
+// function myFun(name) {
+//   console.log(`Hello, my name is ${name}`);
+// }
+// function myFun2(callback) {
+//   console.log('Hello, I am is Callback Function.');
+//   callback('Nizam uddin');
+// }
+// myFun2(myFun);
+
+/*      Function returning Function        */
+function returFun() {
+  function reFun(name) {
+    return `Hello, ${name}`;
+  }
+  return reFun;
+}
+const refn = returFun();
+console.log(refn('Nizam'));
