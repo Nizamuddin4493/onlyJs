@@ -206,7 +206,7 @@
 // const [{ fname }, , { userId }] = users;
 // console.log(fname, userId);
 
-/*          Functions           */
+/* ***********  Functions  *********** */
 // function fun1() {
 //   console.log('Hello Function!');
 // }
@@ -334,11 +334,19 @@
 // myFun2(myFun);
 
 /*      Function returning Function        */
-function returFun() {
-  function reFun(name) {
-    return `Hello, ${name}`;
-  }
-  return reFun;
+// function returFun() {
+//   function reFun(name) {
+//     return `Hello, ${name}`;
+//   }
+//   return reFun;
+// }
+// const refn = returFun();
+// console.log(refn('Nizam'));
+
+/* *********** Array Methods ************* */
+const myArr = [1, 2, 3, 4];
+function arrMultp(number, index) {
+  console.log('index is ', index);
+  console.log(number * 2);
 }
-const refn = returFun();
-console.log(refn('Nizam'));
+arrMultp(myArr[0], 0);
