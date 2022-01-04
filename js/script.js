@@ -350,3 +350,7 @@ function arrMultp(number, index) {
   console.log(number * 2);
 }
 arrMultp(myArr[0], 0);
+
+for (let i = 0; i <= myArr.length; i += 1) {
+  console.log(i);
+}
