@@ -344,6 +344,8 @@
 // console.log(refn('Nizam'));
 
 /* *********** Array Methods ************* */
+
+/* *********** ForEach Loop *********** */
 // const myArr = [1, 2, 3, 4];
 // function arrMultp(number, index) {
 //   console.log(`The value of array is ${number} and index is  ${index}`);
@@ -358,11 +360,31 @@
 // myArr.forEach((number, index) => {
 //   console.log(`The value of array is ${number} and index is  ${index}`);
 // });
+// const myDataArr = [
+//   { firstName: 'Nizam', lastName: 'khan' },
+//   { firstName: 'Ali', lastName: 'Nangarhari' },
+//   { firstName: 'Mahmood', lastName: 'shah' },
+// ];
+// myDataArr.forEach((fname) => {
+//   console.log(fname.firstName);
+// });
+
+/* *********** Map Method ************* */
+
+// const arry = ['Hello', 'I am', 'Nizam', 'khan'];
+
+// function mapM(element, index) {
+//   return `element is: ${element}, index is: ${index}`;
+// }
+// const arrMap = arry.map(mapM); // OR
+// const arrMap = arry.map((element, index) => `element is: ${element}, index is: ${index}`);
+// console.log(arrMap);
+
 const myDataArr = [
   { firstName: 'Nizam', lastName: 'khan' },
   { firstName: 'Ali', lastName: 'Nangarhari' },
   { firstName: 'Mahmood', lastName: 'shah' },
 ];
-myDataArr.forEach((fname) => {
-  console.log(fname.firstName);
-});
+
+const arrData = myDataArr.map((elemt) => elemt.firstName);
+console.log(arrData);
