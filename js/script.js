@@ -389,10 +389,26 @@
 // const arrData = myDataArr.map((elemt) => elemt.firstName);
 // console.log(arrData);
 
-const filtM = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// function filtNum(number) {
-//   return number % 2 === 0;
-// }
-// const filterNumber = filtM.filter(filtNum);
-const filterNumber = filtM.filter((elemnt) => elemnt % 2 === 0);
-console.log(filterNumber);
+/* *********** Filter Method ************* */
+// const filtM = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// // function filtNum(number) {
+// //   return number % 2 === 0;
+// // }
+// // const filterNumber = filtM.filter(filtNum);
+// const filterNumber = filtM.filter((elemnt) => elemnt % 2 === 0);
+// console.log(filterNumber);
+
+/* *********** Reduce Method ************* */
+// const myArr = [1, 2, 3, 4, 5, 60];
+
+// const sumOfAllArry = myArr.reduce((val1, val2) => val1 + val2);
+// console.log(sumOfAllArry);
+
+const itemArr = [
+  { pName: 'Mobile', Model: 'i12', price: 12000 },
+  { pName: 'Laptop', Model: '3420', price: 32000 },
+  { pName: 'Tv', Model: '210', price: 8000 },
+];
+
+const itemArrTotalPrice = itemArr.reduce((tPrice, pPrice) => tPrice + pPrice.price, 0);
+console.log(itemArrTotalPrice);
