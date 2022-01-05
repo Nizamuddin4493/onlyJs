@@ -380,11 +380,19 @@
 // const arrMap = arry.map((element, index) => `element is: ${element}, index is: ${index}`);
 // console.log(arrMap);
 
-const myDataArr = [
-  { firstName: 'Nizam', lastName: 'khan' },
-  { firstName: 'Ali', lastName: 'Nangarhari' },
-  { firstName: 'Mahmood', lastName: 'shah' },
-];
+// const myDataArr = [
+//   { firstName: 'Nizam', lastName: 'khan' },
+//   { firstName: 'Ali', lastName: 'Nangarhari' },
+//   { firstName: 'Mahmood', lastName: 'shah' },
+// ];
 
-const arrData = myDataArr.map((elemt) => elemt.firstName);
-console.log(arrData);
+// const arrData = myDataArr.map((elemt) => elemt.firstName);
+// console.log(arrData);
+
+const filtM = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// function filtNum(number) {
+//   return number % 2 === 0;
+// }
+// const filterNumber = filtM.filter(filtNum);
+const filterNumber = filtM.filter((elemnt) => elemnt % 2 === 0);
+console.log(filterNumber);
