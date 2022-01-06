@@ -404,11 +404,19 @@
 // const sumOfAllArry = myArr.reduce((val1, val2) => val1 + val2);
 // console.log(sumOfAllArry);
 
-const itemArr = [
-  { pName: 'Mobile', Model: 'i12', price: 12000 },
-  { pName: 'Laptop', Model: '3420', price: 32000 },
-  { pName: 'Tv', Model: '210', price: 8000 },
-];
+// const itemArr = [
+//   { pName: 'Mobile', Model: 'i12', price: 12000 },
+//   { pName: 'Laptop', Model: '3420', price: 32000 },
+//   { pName: 'Tv', Model: '210', price: 8000 },
+// ];
 
-const itemArrTotalPrice = itemArr.reduce((tPrice, pPrice) => tPrice + pPrice.price, 0);
-console.log(itemArrTotalPrice);
+// const itemArrTotalPrice = itemArr.reduce((tPrice, pPrice) => tPrice + pPrice.price, 0);
+// console.log(itemArrTotalPrice);
+
+/* *********** Sort Method ************* */
+const sortArr = [2, 101, 5, 400, 31];
+// const soort = sortArr.sort((a, b) => a - b);
+const soort = sortArr.slice(0).sort((a, b) => a - b);
+console.log(soort);
+// console.log(sortArr);
+
