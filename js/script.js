@@ -414,9 +414,25 @@
 // console.log(itemArrTotalPrice);
 
 /* *********** Sort Method ************* */
-const sortArr = [2, 101, 5, 400, 31];
-// const soort = sortArr.sort((a, b) => a - b);
-const soort = sortArr.slice(0).sort((a, b) => a - b);
-console.log(soort);
-// console.log(sortArr);
+// const sortArr = [2, 101, 5, 400, 31];
+// // const soort = sortArr.sort((a, b) => a - b);
+// const soort = sortArr.slice(0).sort((a, b) => a - b);
+// console.log(soort);
+// // console.log(sortArr);
 
+/* *********** Sort Method ************* */
+// const findArr = ['Nizam', 'khan', 'is', 'the great'];
+// function findCall(lenth) {
+//   return lenth.length === 5;
+// }
+// const ans = findArr.find(findCall);
+// console.log(ans);
+
+const users = [
+  { userId: 1, name: 'Nizam' },
+  { userId: 2, name: 'Khan' },
+  { userId: 3, name: 'Ali' },
+];
+
+const userFind = users.find((id) => id.userId === 1);
+console.log(userFind);
