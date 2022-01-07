@@ -428,11 +428,28 @@
 // const ans = findArr.find(findCall);
 // console.log(ans);
 
-const users = [
-  { userId: 1, name: 'Nizam' },
-  { userId: 2, name: 'Khan' },
-  { userId: 3, name: 'Ali' },
-];
+// const users = [
+//   { userId: 1, name: 'Nizam' },
+//   { userId: 2, name: 'Khan' },
+//   { userId: 3, name: 'Ali' },
+// ];
 
-const userFind = users.find((id) => id.userId === 1);
-console.log(userFind);
+// const userFind = users.find((id) => id.userId === 1);
+// console.log(userFind);
+
+/* *********** Sort Method ************* */
+// const numbers = [2, 4, 6, 10];
+// function isEven(evn) {
+// return evn % 2 === 0;
+// }
+// const ans = numbers.every(isEven);
+// console.log(ans); // OR
+// const ans = numbers.every((evn) => evn % 2 === 0);
+// console.log(ans);
+
+const products = [
+  { pId: 1, Name: 'mobile-1', price: 3000 },
+  { pId: 2, Name: 'mobile-2', price: 5000 },
+  { pId: 3, Name: 'mobile-3', price: 12000 },
+];
+console.log(products.every((ppp) => ppp.price < 13000));
