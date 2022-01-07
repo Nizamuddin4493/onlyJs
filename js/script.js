@@ -437,7 +437,7 @@
 // const userFind = users.find((id) => id.userId === 1);
 // console.log(userFind);
 
-/* *********** Sort Method ************* */
+/* *********** Every Method ************* */
 // const numbers = [2, 4, 6, 10];
 // function isEven(evn) {
 // return evn % 2 === 0;
@@ -447,9 +447,22 @@
 // const ans = numbers.every((evn) => evn % 2 === 0);
 // console.log(ans);
 
+// const products = [
+//   { pId: 1, Name: 'mobile-1', price: 3000 },
+//   { pId: 2, Name: 'mobile-2', price: 5000 },
+//   { pId: 3, Name: 'mobile-3', price: 12000 },
+// ];
+// console.log(products.every((ppp) => ppp.price < 13000));
+
+/* *********** Some Method ************* */
+// const number = [1, 2, 3, 5, 7];
+// const ans = number.some((valu) => valu % 2 === 0);
+// console.log(ans); // answer shoulb be true, b/c there is an even number
+
 const products = [
   { pId: 1, Name: 'mobile-1', price: 3000 },
   { pId: 2, Name: 'mobile-2', price: 5000 },
   { pId: 3, Name: 'mobile-3', price: 12000 },
 ];
-console.log(products.every((ppp) => ppp.price < 13000));
+const ans = products.some((val) => val.price > 10000);
+console.log(ans);
