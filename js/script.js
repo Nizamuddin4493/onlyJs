@@ -467,10 +467,20 @@
 // const ans = products.some((val) => val.price > 10000);
 // console.log(ans);
 
-/* *********** Some Method ************* */
+/* *********** Fill Method ************* */
 // fill(value, start, end)
 // const myArr = new Array(10).fill(-1);
 // console.log(myArr);
 
-const myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(myArr.fill('Nizam', 2, 5));
+// const myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(myArr.fill('Nizam', 2, 5));
+
+/* *********** splice Method ************* */
+// splice(start, delete, insert)
+const myArr = ['item1', 'item2', 'item3'];
+// const deletedVal = myArr.splice(1, 1);
+// console.log(deletedVal);
+// console.log(myArr);
+
+myArr.splice(1, 0, 'Insert New Item', 'Insert New Item');
+console.log(myArr);
