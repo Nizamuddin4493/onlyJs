@@ -459,10 +459,18 @@
 // const ans = number.some((valu) => valu % 2 === 0);
 // console.log(ans); // answer shoulb be true, b/c there is an even number
 
-const products = [
-  { pId: 1, Name: 'mobile-1', price: 3000 },
-  { pId: 2, Name: 'mobile-2', price: 5000 },
-  { pId: 3, Name: 'mobile-3', price: 12000 },
-];
-const ans = products.some((val) => val.price > 10000);
-console.log(ans);
+// const products = [
+//   { pId: 1, Name: 'mobile-1', price: 3000 },
+//   { pId: 2, Name: 'mobile-2', price: 5000 },
+//   { pId: 3, Name: 'mobile-3', price: 12000 },
+// ];
+// const ans = products.some((val) => val.price > 10000);
+// console.log(ans);
+
+/* *********** Some Method ************* */
+// fill(value, start, end)
+// const myArr = new Array(10).fill(-1);
+// console.log(myArr);
+
+const myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(myArr.fill('Nizam', 2, 5));
