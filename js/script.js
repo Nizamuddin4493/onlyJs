@@ -206,7 +206,7 @@
 // const [{ fname }, , { userId }] = users;
 // console.log(fname, userId);
 
-/*          Functions           */
+/* ***********  Functions  *********** */
 // function fun1() {
 //   console.log('Hello Function!');
 // }
@@ -334,11 +334,153 @@
 // myFun2(myFun);
 
 /*      Function returning Function        */
-function returFun() {
-  function reFun(name) {
-    return `Hello, ${name}`;
-  }
-  return reFun;
-}
-const refn = returFun();
-console.log(refn('Nizam'));
+// function returFun() {
+//   function reFun(name) {
+//     return `Hello, ${name}`;
+//   }
+//   return reFun;
+// }
+// const refn = returFun();
+// console.log(refn('Nizam'));
+
+/* *********** Array Methods ************* */
+
+/* *********** ForEach Loop *********** */
+// const myArr = [1, 2, 3, 4];
+// function arrMultp(number, index) {
+//   console.log(`The value of array is ${number} and index is  ${index}`);
+// }
+// arrMultp(myArr[2]);
+
+// for (let i = 0; i < myArr.length; i += 1) {
+//   arrMultp(myArr[i], i);
+// }
+
+// myArr.forEach(arrMultp); // OR
+// myArr.forEach((number, index) => {
+//   console.log(`The value of array is ${number} and index is  ${index}`);
+// });
+// const myDataArr = [
+//   { firstName: 'Nizam', lastName: 'khan' },
+//   { firstName: 'Ali', lastName: 'Nangarhari' },
+//   { firstName: 'Mahmood', lastName: 'shah' },
+// ];
+// myDataArr.forEach((fname) => {
+//   console.log(fname.firstName);
+// });
+
+/* *********** Map Method ************* */
+
+// const arry = ['Hello', 'I am', 'Nizam', 'khan'];
+
+// function mapM(element, index) {
+//   return `element is: ${element}, index is: ${index}`;
+// }
+// const arrMap = arry.map(mapM); // OR
+// const arrMap = arry.map((element, index) => `element is: ${element}, index is: ${index}`);
+// console.log(arrMap);
+
+// const myDataArr = [
+//   { firstName: 'Nizam', lastName: 'khan' },
+//   { firstName: 'Ali', lastName: 'Nangarhari' },
+//   { firstName: 'Mahmood', lastName: 'shah' },
+// ];
+
+// const arrData = myDataArr.map((elemt) => elemt.firstName);
+// console.log(arrData);
+
+/* *********** Filter Method ************* */
+// const filtM = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// // function filtNum(number) {
+// //   return number % 2 === 0;
+// // }
+// // const filterNumber = filtM.filter(filtNum);
+// const filterNumber = filtM.filter((elemnt) => elemnt % 2 === 0);
+// console.log(filterNumber);
+
+/* *********** Reduce Method ************* */
+// const myArr = [1, 2, 3, 4, 5, 60];
+
+// const sumOfAllArry = myArr.reduce((val1, val2) => val1 + val2);
+// console.log(sumOfAllArry);
+
+// const itemArr = [
+//   { pName: 'Mobile', Model: 'i12', price: 12000 },
+//   { pName: 'Laptop', Model: '3420', price: 32000 },
+//   { pName: 'Tv', Model: '210', price: 8000 },
+// ];
+
+// const itemArrTotalPrice = itemArr.reduce((tPrice, pPrice) => tPrice + pPrice.price, 0);
+// console.log(itemArrTotalPrice);
+
+/* *********** Sort Method ************* */
+// const sortArr = [2, 101, 5, 400, 31];
+// // const soort = sortArr.sort((a, b) => a - b);
+// const soort = sortArr.slice(0).sort((a, b) => a - b);
+// console.log(soort);
+// // console.log(sortArr);
+
+/* *********** Sort Method ************* */
+// const findArr = ['Nizam', 'khan', 'is', 'the great'];
+// function findCall(lenth) {
+//   return lenth.length === 5;
+// }
+// const ans = findArr.find(findCall);
+// console.log(ans);
+
+// const users = [
+//   { userId: 1, name: 'Nizam' },
+//   { userId: 2, name: 'Khan' },
+//   { userId: 3, name: 'Ali' },
+// ];
+
+// const userFind = users.find((id) => id.userId === 1);
+// console.log(userFind);
+
+/* *********** Every Method ************* */
+// const numbers = [2, 4, 6, 10];
+// function isEven(evn) {
+// return evn % 2 === 0;
+// }
+// const ans = numbers.every(isEven);
+// console.log(ans); // OR
+// const ans = numbers.every((evn) => evn % 2 === 0);
+// console.log(ans);
+
+// const products = [
+//   { pId: 1, Name: 'mobile-1', price: 3000 },
+//   { pId: 2, Name: 'mobile-2', price: 5000 },
+//   { pId: 3, Name: 'mobile-3', price: 12000 },
+// ];
+// console.log(products.every((ppp) => ppp.price < 13000));
+
+/* *********** Some Method ************* */
+// const number = [1, 2, 3, 5, 7];
+// const ans = number.some((valu) => valu % 2 === 0);
+// console.log(ans); // answer shoulb be true, b/c there is an even number
+
+// const products = [
+//   { pId: 1, Name: 'mobile-1', price: 3000 },
+//   { pId: 2, Name: 'mobile-2', price: 5000 },
+//   { pId: 3, Name: 'mobile-3', price: 12000 },
+// ];
+// const ans = products.some((val) => val.price > 10000);
+// console.log(ans);
+
+/* *********** Fill Method ************* */
+// fill(value, start, end)
+// const myArr = new Array(10).fill(-1);
+// console.log(myArr);
+
+// const myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(myArr.fill('Nizam', 2, 5));
+
+/* *********** splice Method ************* */
+// splice(start, delete, insert)
+const myArr = ['item1', 'item2', 'item3'];
+// const deletedVal = myArr.splice(1, 1);
+// console.log(deletedVal);
+// console.log(myArr);
+
+myArr.splice(1, 0, 'Insert New Item', 'Insert New Item');
+console.log(myArr);
