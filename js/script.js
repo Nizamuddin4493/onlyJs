@@ -1,3 +1,6 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-console */
+
 // let fName = 'Nizam';
 // let lName = 'khan';
 // let age = 29;
@@ -420,7 +423,7 @@
 // console.log(soort);
 // // console.log(sortArr);
 
-/* *********** Sort Method ************* */
+/* *********** Find Method ************* */
 // const findArr = ['Nizam', 'khan', 'is', 'the great'];
 // function findCall(lenth) {
 //   return lenth.length === 5;
@@ -477,10 +480,83 @@
 
 /* *********** splice Method ************* */
 // splice(start, delete, insert)
-const myArr = ['item1', 'item2', 'item3'];
-// const deletedVal = myArr.splice(1, 1);
-// console.log(deletedVal);
+// const myArr = ['item1', 'item2', 'item3'];
+// // const deletedVal = myArr.splice(1, 1);
+// // console.log(deletedVal);
+// // console.log(myArr);
+
+// myArr.splice(1, 0, 'Insert New Item', 'Insert New Item');
 // console.log(myArr);
 
-myArr.splice(1, 0, 'Insert New Item', 'Insert New Item');
-console.log(myArr);
+/* *********** Sets ************* */
+// set is iterable by using for Of Loop
+// const numbers = new Set([1, 2, 3]);
+// numbers.add(4);
+// numbers.add(5);
+// console.log(numbers);
+
+// const nameLeter = ['This', 'is', 'array', 'inside', 'a set'];
+// const char = new Set('Nizam');
+// char.add('khan');
+// char.add(nameLeter);
+// if (char.has('N')) {
+//   console.log('N is Present');
+// } else {
+//   console.log('N is Not present');
+// }
+// console.log(char);
+// for (const chars of char) {
+//   console.log(chars);
+// }
+// set is use when you have unique value in array
+// const arr = [1, 2, 3, 3, 4, 4, 5, 5];
+// const uniqueArr = new Set(arr);
+// console.log(uniqueArr);
+// console.log(arr);
+
+/* *********** Map ************* */
+// const person = new Map();
+// person.set('firstName', 'Nizam');
+// person.set('age', '26');
+// person.set(1, 'one');
+// console.log(person);
+// console.log(person.get('firstName'));
+// for (const key of person.keys()) {
+//   console.log(key);
+// }
+
+// for (const [key, value] of person) {
+//   console.log(key, value);
+// }
+
+// const person = {
+//   id: 1,
+//   fName: 'Nizam',
+// };
+// const personInfo = new Map();
+// personInfo.set(person, { age: 22, gender: 'Male' });
+// // console.log(personInfo);
+// console.log(personInfo.get(person).age);
+
+/* *********** clone using Object.assign ************* */
+// const myObj1 = {
+//   id: 1,
+//   fName: 'Nizam',
+// };
+
+// // const myObj2 = myObj1;
+// const myObj2 = { ...myObj1 }; // object.assing() in not supported in ES6
+// myObj1.age = 23;
+// console.log(myObj1);
+// console.log(myObj2);
+
+/* *********** Optional Chaing ************* */
+
+const person = {
+  id: 1,
+  fName: 'Nizam',
+  // address: { country: 'Afghanistan' },
+};
+console.log(person.fName);
+// console.log(person.address.country); // It gives an error if value does not extist
+console.log(person?.address?.country); // It gives undefine by using ? mark
