@@ -539,13 +539,24 @@
 // console.log(personInfo.get(person).age);
 
 /* *********** clone using Object.assign ************* */
-const myObj1 = {
+// const myObj1 = {
+//   id: 1,
+//   fName: 'Nizam',
+// };
+
+// // const myObj2 = myObj1;
+// const myObj2 = { ...myObj1 }; // object.assing() in not supported in ES6
+// myObj1.age = 23;
+// console.log(myObj1);
+// console.log(myObj2);
+
+/* *********** Optional Chaing ************* */
+
+const person = {
   id: 1,
   fName: 'Nizam',
+  // address: { country: 'Afghanistan' },
 };
-
-// const myObj2 = myObj1;
-const myObj2 = { ...myObj1 }; // object.assing() in not supported in ES6
-myObj1.age = 23;
-console.log(myObj1);
-console.log(myObj2);
+console.log(person.fName);
+// console.log(person.address.country); // It gives an error if value does not extist
+console.log(person?.address?.country); // It gives undefine by using ? mark
