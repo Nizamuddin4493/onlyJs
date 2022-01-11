@@ -420,7 +420,7 @@
 // console.log(soort);
 // // console.log(sortArr);
 
-/* *********** Sort Method ************* */
+/* *********** Find Method ************* */
 // const findArr = ['Nizam', 'khan', 'is', 'the great'];
 // function findCall(lenth) {
 //   return lenth.length === 5;
@@ -477,10 +477,12 @@
 
 /* *********** splice Method ************* */
 // splice(start, delete, insert)
-const myArr = ['item1', 'item2', 'item3'];
-// const deletedVal = myArr.splice(1, 1);
-// console.log(deletedVal);
+// const myArr = ['item1', 'item2', 'item3'];
+// // const deletedVal = myArr.splice(1, 1);
+// // console.log(deletedVal);
+// // console.log(myArr);
+
+// myArr.splice(1, 0, 'Insert New Item', 'Insert New Item');
 // console.log(myArr);
 
-myArr.splice(1, 0, 'Insert New Item', 'Insert New Item');
-console.log(myArr);
+/* *********** sets ************* */
