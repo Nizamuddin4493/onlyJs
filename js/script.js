@@ -529,11 +529,23 @@
 //   console.log(key, value);
 // }
 
-const person = {
+// const person = {
+//   id: 1,
+//   fName: 'Nizam',
+// };
+// const personInfo = new Map();
+// personInfo.set(person, { age: 22, gender: 'Male' });
+// // console.log(personInfo);
+// console.log(personInfo.get(person).age);
+
+/* *********** clone using Object.assign ************* */
+const myObj1 = {
   id: 1,
   fName: 'Nizam',
 };
-const personInfo = new Map();
-personInfo.set(person, { age: 22, gender: 'Male' });
-// console.log(personInfo);
-console.log(personInfo.get(person).age);
+
+// const myObj2 = myObj1;
+const myObj2 = { ...myObj1 }; // object.assing() in not supported in ES6
+myObj1.age = 23;
+console.log(myObj1);
+console.log(myObj2);
