@@ -485,4 +485,28 @@
 // myArr.splice(1, 0, 'Insert New Item', 'Insert New Item');
 // console.log(myArr);
 
-/* *********** sets ************* */
+/* *********** Sets ************* */
+// set is iterable by using for Of Loop
+// const numbers = new Set([1, 2, 3]);
+// numbers.add(4);
+// numbers.add(5);
+// console.log(numbers);
+
+// const nameLeter = ['This', 'is', 'array', 'inside', 'a set'];
+// const char = new Set('Nizam');
+// char.add('khan');
+// char.add(nameLeter);
+// if (char.has('N')) {
+//   console.log('N is Present');
+// } else {
+//   console.log('N is Not present');
+// }
+// console.log(char);
+// for (const chars of char) {
+//   console.log(chars);
+// }
+// set is use when you have unique value in array
+const arr = [1, 2, 3, 3, 4, 4, 5, 5];
+const uniqueArr = new Set(arr);
+console.log(uniqueArr);
+console.log(arr);
