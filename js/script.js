@@ -551,12 +551,44 @@
 // console.log(myObj2);
 
 /* *********** Optional Chaing ************* */
+// const person = {
+//   id: 1,
+//   fName: 'Nizam',
+//   // address: { country: 'Afghanistan' },
+// };
+// console.log(person.fName);
+// // console.log(person.address.country); // It gives an error if value does not extist
+// console.log(person?.address?.country); // It gives undefine by using ? mark
 
-const person = {
-  id: 1,
+/* *********** Methods ************* */
+// Methods are functions inside object
+// const myObj = {
+//   fName: 'Nizam',
+//   age: 21,
+//   about() {
+//     console.log(`Hello, I am ${this.fName} and my age is ${this.age}`);
+//   },
+// };
+// myObj.about();
+
+function myInfo() {
+  console.log(`Hello, I am ${this.fName} and my age is ${this.age}`);
+}
+const myObj1 = {
   fName: 'Nizam',
-  // address: { country: 'Afghanistan' },
+  age: 22,
+  func: myInfo,
 };
-console.log(person.fName);
-// console.log(person.address.country); // It gives an error if value does not extist
-console.log(person?.address?.country); // It gives undefine by using ? mark
+const myObj2 = {
+  fName: 'Khan',
+  age: 32,
+  func: myInfo,
+};
+const myObj3 = {
+  fName: 'Ali',
+  age: 42,
+  func: myInfo,
+};
+myObj1.func();
+myObj2.func();
+myObj3.func();
