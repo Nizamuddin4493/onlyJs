@@ -625,5 +625,12 @@ const myObj2 = {
 // myObj1.about('male', 'kabul');
 // myObj1.about.call(myObj2, 'male', 'Jalalabad'); // Using Call
 // myObj1.about.apply(myObj2, ['male', 'Kandahar']); // Using Apply
+// const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
+// func();
+
+/* ************ warning *************** */
+const myfun = myObj1.about;
+myfun('male', 'kundos'); // show warning / Erron sometime and not a good pracitce
+
 const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
-func();
+func(); // use instead
