@@ -551,12 +551,86 @@
 // console.log(myObj2);
 
 /* *********** Optional Chaing ************* */
+// const person = {
+//   id: 1,
+//   fName: 'Nizam',
+//   // address: { country: 'Afghanistan' },
+// };
+// console.log(person.fName);
+// // console.log(person.address.country); // It gives an error if value does not extist
+// console.log(person?.address?.country); // It gives undefine by using ? mark
 
-const person = {
-  id: 1,
+/* *********** Methods ************* */
+// Methods are functions inside object
+// const myObj = {
+//   fName: 'Nizam',
+//   age: 21,
+//   about() {
+//     console.log(`Hello, I am ${this.fName} and my age is ${this.age}`);
+//   },
+// };
+// myObj.about();
+
+// function myInfo() {
+//   console.log(`Hello, I am ${this.fName} and my age is ${this.age}`);
+// }
+// const myObj1 = {
+//   fName: 'Nizam',
+//   age: 22,
+//   func: myInfo,
+// };
+// const myObj2 = {
+//   fName: 'Khan',
+//   age: 32,
+//   func: myInfo,
+// };
+// const myObj3 = {
+//   fName: 'Ali',
+//   age: 42,
+//   func: myInfo,
+// };
+// myObj1.func();
+// myObj2.func();
+// myObj3.func();
+
+/* ***********  Call, apply, bind ************* */
+
+// const myObj1 = {
+//   fName: 'Nizam',
+//   age: 22,
+//   about() {
+//     console.log(`My name is ${this.fName} and my age is ${this.age}`);
+//   },
+// };
+// const myObj2 = {
+//   fName: 'Khan',
+//   age: 23,
+// };
+
+// myObj1.about();
+// myObj1.about.call(myObj2);
+
+const myObj1 = {
   fName: 'Nizam',
-  // address: { country: 'Afghanistan' },
+  age: 22,
+  about(gender, city) {
+    console.log(`My name is ${this.fName} and my age is ${this.age} gender is ${gender} and city is ${city}`);
+  },
 };
-console.log(person.fName);
-// console.log(person.address.country); // It gives an error if value does not extist
-console.log(person?.address?.country); // It gives undefine by using ? mark
+const myObj2 = {
+  fName: 'Khan',
+  age: 23,
+};
+
+// myObj1.about('male', 'kabul');
+// myObj1.about.call(myObj2, 'male', 'Jalalabad'); // Using Call
+// myObj1.about.apply(myObj2, ['male', 'Kandahar']); // Using Apply
+// const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
+// func();
+
+/* ************ warning *************** */
+const myfun = myObj1.about;
+myfun('male', 'kundos'); // show warning / Erron sometime and not a good pracitce
+
+const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
+func(); // use instead
