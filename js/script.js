@@ -571,24 +571,59 @@
 // };
 // myObj.about();
 
-function myInfo() {
-  console.log(`Hello, I am ${this.fName} and my age is ${this.age}`);
-}
+// function myInfo() {
+//   console.log(`Hello, I am ${this.fName} and my age is ${this.age}`);
+// }
+// const myObj1 = {
+//   fName: 'Nizam',
+//   age: 22,
+//   func: myInfo,
+// };
+// const myObj2 = {
+//   fName: 'Khan',
+//   age: 32,
+//   func: myInfo,
+// };
+// const myObj3 = {
+//   fName: 'Ali',
+//   age: 42,
+//   func: myInfo,
+// };
+// myObj1.func();
+// myObj2.func();
+// myObj3.func();
+
+/* ***********  Call, apply, bind ************* */
+
+// const myObj1 = {
+//   fName: 'Nizam',
+//   age: 22,
+//   about() {
+//     console.log(`My name is ${this.fName} and my age is ${this.age}`);
+//   },
+// };
+// const myObj2 = {
+//   fName: 'Khan',
+//   age: 23,
+// };
+
+// myObj1.about();
+// myObj1.about.call(myObj2);
+
 const myObj1 = {
   fName: 'Nizam',
   age: 22,
-  func: myInfo,
+  about(gender, city) {
+    console.log(`My name is ${this.fName} and my age is ${this.age} gender is ${gender} and city is ${city}`);
+  },
 };
 const myObj2 = {
   fName: 'Khan',
-  age: 32,
-  func: myInfo,
+  age: 23,
 };
-const myObj3 = {
-  fName: 'Ali',
-  age: 42,
-  func: myInfo,
-};
-myObj1.func();
-myObj2.func();
-myObj3.func();
+
+// myObj1.about('male', 'kabul');
+// myObj1.about.call(myObj2, 'male', 'Jalalabad'); // Using Call
+// myObj1.about.apply(myObj2, ['male', 'Kandahar']); // Using Apply
+const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
+func();
