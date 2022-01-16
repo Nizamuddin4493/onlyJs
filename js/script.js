@@ -629,16 +629,24 @@
 // // const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
 // // func();
 
-// /* ************ warning *************** */
+/* ************ warning *************** */
 // const myfun = myObj1.about;
 // myfun('male', 'kundos'); // show warning / Erron sometime and not a good pracitce
 
 // const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
 // func(); // use instead
 
-const myObj = {
-  fname: 'nizam',
-  age: 24,
+/* ******* Create A Function of Create an Object/Objects ******* */
+const creatObj = (fName, lName, age, address) => {
+  const myObj = {};
+  myObj.fName = fName;
+  myObj.lName = lName;
+  myObj.age = age;
+  myObj.address = address;
+  myObj.is18 = () => myObj.age >= 18;
+  myObj.about = () => `Your First Name is ${myObj.fName} and age is ${myObj.age}`;
+  return myObj;
 };
 
-console.log(myObj.fname);
+const myobj1 = creatObj('Nizam', 'Khan', 27, 'Kabul');
+console.log(myobj1.about());
