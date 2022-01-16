@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-console */
 
@@ -610,27 +611,34 @@
 // myObj1.about();
 // myObj1.about.call(myObj2);
 
-const myObj1 = {
-  fName: 'Nizam',
-  age: 22,
-  about(gender, city) {
-    console.log(`My name is ${this.fName} and my age is ${this.age} gender is ${gender} and city is ${city}`);
-  },
-};
-const myObj2 = {
-  fName: 'Khan',
-  age: 23,
-};
+// const myObj1 = {
+//   fName: 'Nizam',
+//   age: 22,
+//   about(gender, city) {
+//     console.log(`My name is ${this.fName}, my age is ${this.age} gender is ${gender} and city is ${city}`);
+//   },
+// };
+// const myObj2 = {
+//   fName: 'Khan',
+//   age: 23,
+// };
 
-// myObj1.about('male', 'kabul');
-// myObj1.about.call(myObj2, 'male', 'Jalalabad'); // Using Call
-// myObj1.about.apply(myObj2, ['male', 'Kandahar']); // Using Apply
+// // myObj1.about('male', 'kabul');
+// // myObj1.about.call(myObj2, 'male', 'Jalalabad'); // Using Call
+// // myObj1.about.apply(myObj2, ['male', 'Kandahar']); // Using Apply
+// // const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
+// // func();
+
+// /* ************ warning *************** */
+// const myfun = myObj1.about;
+// myfun('male', 'kundos'); // show warning / Erron sometime and not a good pracitce
+
 // const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
-// func();
+// func(); // use instead
 
-/* ************ warning *************** */
-const myfun = myObj1.about;
-myfun('male', 'kundos'); // show warning / Erron sometime and not a good pracitce
+const myObj = {
+  fname: 'nizam',
+  age: 24,
+};
 
-const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
-func(); // use instead
+console.log(myObj.fname);
