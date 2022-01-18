@@ -636,17 +636,37 @@
 // const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
 // func(); // use instead
 
-/* ******* Create A Function of Create an Object/Objects ******* */
+/* ******* Create A Function to Create an Object/Objects ******* */
+// const creatObj = (fName, lName, age, address) => {
+//   const myObj = {};
+//   myObj.fName = fName;
+//   myObj.lName = lName;
+//   myObj.age = age;
+//   myObj.address = address;
+//   myObj.is18 = () => myObj.age >= 18;
+//   myObj.about = () => `Your First Name is ${myObj.fName} and age is ${myObj.age}`;
+//   return myObj;
+// };
+
+// const myobj1 = creatObj('Nizam', 'Khan', 27, 'Kabul');
+// console.log(myobj1.about());
+
+/* ******* Store Methods in different Objects ******* */
+const funObject = {
+  is18: () => this.age >= 19,
+  about: () => `Your First Name is ${this.fName} and age is ${this.age}`,
+};
 const creatObj = (fName, lName, age, address) => {
   const myObj = {};
   myObj.fName = fName;
   myObj.lName = lName;
   myObj.age = age;
   myObj.address = address;
-  myObj.is18 = () => myObj.age >= 18;
-  myObj.about = () => `Your First Name is ${myObj.fName} and age is ${myObj.age}`;
+  myObj.is18 = funObject.is18;
+  myObj.about = funObject.about;
   return myObj;
 };
 
 const myobj1 = creatObj('Nizam', 'Khan', 27, 'Kabul');
+console.log(myobj1.is18());
 console.log(myobj1.about());
