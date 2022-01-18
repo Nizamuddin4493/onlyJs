@@ -652,21 +652,32 @@
 // console.log(myobj1.about());
 
 /* ******* Store Methods in different Objects ******* */
-const funObject = {
-  is18: () => this.age >= 19,
-  about: () => `Your First Name is ${this.fName} and age is ${this.age}`,
-};
-const creatObj = (fName, lName, age, address) => {
-  const myObj = {};
-  myObj.fName = fName;
-  myObj.lName = lName;
-  myObj.age = age;
-  myObj.address = address;
-  myObj.is18 = funObject.is18;
-  myObj.about = funObject.about;
-  return myObj;
-};
+// const funObject = {
+//   is18: () => this.age >= 19,
+//   about: () => `Your First Name is ${this.fName} and age is ${this.age}`,
+// };
+// const creatObj = (fName, lName, age, address) => {
+//   const myObj = {};
+//   myObj.fName = fName;
+//   myObj.lName = lName;
+//   myObj.age = age;
+//   myObj.address = address;
+//   myObj.is18 = funObject.is18;
+//   myObj.about = funObject.about;
+//   return myObj;
+// };
 
-const myobj1 = creatObj('Nizam', 'Khan', 27, 'Kabul');
-console.log(myobj1.is18());
-console.log(myobj1.about());
+// const myobj1 = creatObj('Nizam', 'Khan', 27, 'Kabul');
+// console.log(myobj1.is18());
+// console.log(myobj1.about());
+
+/* ******* Solution using Object.create ******* */
+const myObj1 = {
+  fName: 'nizam',
+  lName: 'khan',
+};
+const myObj2 = Object.create(myObj1);
+myObj2.age = 21;
+
+console.log(myObj2.fName);
+console.log(myObj2.age);
