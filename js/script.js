@@ -672,12 +672,21 @@
 // console.log(myobj1.about());
 
 /* ******* Solution using Object.create ******* */
-const myObj1 = {
-  fName: 'nizam',
-  lName: 'khan',
-};
-const myObj2 = Object.create(myObj1);
-myObj2.age = 21;
+// const myObj1 = {
+//   fName: 'nizam',
+//   lName: 'khan',
+// };
+// const myObj2 = Object.create(myObj1);
+// myObj2.age = 21;
 
-console.log(myObj2.fName);
-console.log(myObj2.age);
+// console.log(myObj2.fName);
+// console.log(myObj2.age);
+
+/* ******* prototype ******* */
+
+const myfunc = function () {
+  console.log('I am a function.');
+};
+myfunc(); // function can also be treat as object
+myfunc.funcObject = 'fucntion as Object';
+console.log(myfunc.funcObject);
