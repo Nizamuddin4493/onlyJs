@@ -629,16 +629,64 @@
 // // const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
 // // func();
 
-// /* ************ warning *************** */
+/* ************ warning *************** */
 // const myfun = myObj1.about;
 // myfun('male', 'kundos'); // show warning / Erron sometime and not a good pracitce
 
 // const func = myObj1.about.bind(myObj2, 'male', 'Kandahar'); // Using bind will return a function
 // func(); // use instead
 
-const myObj = {
-  fname: 'nizam',
-  age: 24,
-};
+/* ******* Create A Function to Create an Object/Objects ******* */
+// const creatObj = (fName, lName, age, address) => {
+//   const myObj = {};
+//   myObj.fName = fName;
+//   myObj.lName = lName;
+//   myObj.age = age;
+//   myObj.address = address;
+//   myObj.is18 = () => myObj.age >= 18;
+//   myObj.about = () => `Your First Name is ${myObj.fName} and age is ${myObj.age}`;
+//   return myObj;
+// };
 
-console.log(myObj.fname);
+// const myobj1 = creatObj('Nizam', 'Khan', 27, 'Kabul');
+// console.log(myobj1.about());
+
+/* ******* Store Methods in different Objects ******* */
+// const funObject = {
+//   is18: () => this.age >= 19,
+//   about: () => `Your First Name is ${this.fName} and age is ${this.age}`,
+// };
+// const creatObj = (fName, lName, age, address) => {
+//   const myObj = {};
+//   myObj.fName = fName;
+//   myObj.lName = lName;
+//   myObj.age = age;
+//   myObj.address = address;
+//   myObj.is18 = funObject.is18;
+//   myObj.about = funObject.about;
+//   return myObj;
+// };
+
+// const myobj1 = creatObj('Nizam', 'Khan', 27, 'Kabul');
+// console.log(myobj1.is18());
+// console.log(myobj1.about());
+
+/* ******* Solution using Object.create ******* */
+// const myObj1 = {
+//   fName: 'nizam',
+//   lName: 'khan',
+// };
+// const myObj2 = Object.create(myObj1);
+// myObj2.age = 21;
+
+// console.log(myObj2.fName);
+// console.log(myObj2.age);
+
+/* ******* prototype ******* */
+
+const myfunc = function () {
+  console.log('I am a function.');
+};
+myfunc(); // function can also be treat as object
+myfunc.funcObject = 'fucntion as Object';
+console.log(myfunc.funcObject);
