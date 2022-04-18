@@ -684,9 +684,14 @@
 
 /* ******* prototype ******* */
 
-const myfunc = function () {
-  console.log('I am a function.');
-};
-myfunc(); // function can also be treat as object
-myfunc.funcObject = 'fucntion as Object';
-console.log(myfunc.funcObject);
+// const myfunc = function () {
+//   console.log('I am a function.');
+// };
+// myfunc(); // function can also be treat as object
+// myfunc.funcObject = 'fucntion as Object';
+// console.log(myfunc.funcObject);
+
+const myArr = [];
+console.log(myArr);
+myArr.push("hello", "I am", "Nizam");
+console.log(myArr);
