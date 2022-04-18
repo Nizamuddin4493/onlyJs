@@ -695,3 +695,6 @@ const myArr = [];
 console.log(myArr);
 myArr.push("hello", "I am", "Nizam");
 console.log(myArr);
+
+myArr.pop();
+console.log(myArr);
