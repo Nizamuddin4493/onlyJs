@@ -691,10 +691,11 @@
 // myfunc.funcObject = 'fucntion as Object';
 // console.log(myfunc.funcObject);
 
-const myArr = [];
-console.log(myArr);
-myArr.push("hello", "I am", "Nizam");
-console.log(myArr);
+//       array distructring      
+let [val1, val2] = myArr;
+let [val1,  ,val2] = myArr;     // Use for scaping the value
+let [val1, val2, ...myArr5] = myArr;     // creating new Array for reminig values
+console.log(val1);
+console.log(val2);
+console.log(myArr5);
 
-myArr.pop();
-console.log(myArr);
