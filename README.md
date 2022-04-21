@@ -1,3 +1,4 @@
 # onlyJs
 
-## JavaScript Repeat Practice for Mastery.
+## JavaScript Repeat Practice for Mastery in js.
+
