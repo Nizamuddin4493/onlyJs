@@ -714,9 +714,15 @@ class Climate {
        return `The temprature ${this.temp} is Greater then 5 and less then 19, so it is wormer.`;    
     }
   }
+  
+  whencold() {
+    if (this.temp < 5) {
+       return `The temprature ${this.temp} is less then 5, so it is cold.`;    
+    }
+  }
 }
 
-const hotWeather = new Climate(12);
+const hotWeather = new Climate(2);
 
-console.log(hotWeather.whenwormer());
+console.log(hotWeather.whencold());
 
