@@ -702,9 +702,15 @@ class Climate {
       return `The temprature ${this.temp} is Greater then 40, so it is hot.`;
     }
   }
+  
+  whenNormal() {
+    if (this.temp >= 20 && this.temp <= 39) {
+       return `The temprature ${this.temp} is Greater then 20 and less then 39, so it is Normal.`;    
+    }
+  }
 }
 
-const hotWeather = new Climate(41);
+const hotWeather = new Climate(23);
 
-console.log(hotWeather.whenHot());
+console.log(hotWeather.whenNormal());
 
