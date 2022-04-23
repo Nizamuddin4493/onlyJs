@@ -692,11 +692,19 @@
 // console.log(myfunc.funcObject);
 
 /* ******* Class ******* */
-const class climate {
-  constructor(sunny,windy,cloudy,rainy) {
-    this.sunny = sunny;
-    this.windy = windy;
-    this.cloudy = cloudy;
-    this.rainy = rainy;
-  }  
+class Climate {
+  constructor(temp) {
+    this.temp = temp;
+  }
+
+  whenHot() {
+    if(this.temp >= 40) {
+      return `The temprature ${this.temp} is Greater then 40, so it is hot.`;
+    }
+  }
 }
+
+const hotWeather = new Climate(41);
+
+console.log(hotWeather.whenHot());
+
