@@ -708,9 +708,15 @@ class Climate {
        return `The temprature ${this.temp} is Greater then 20 and less then 39, so it is Normal.`;    
     }
   }
+  
+  whenwormer() {
+    if (this.temp >= 5 && this.temp <= 19) {
+       return `The temprature ${this.temp} is Greater then 5 and less then 19, so it is wormer.`;    
+    }
+  }
 }
 
-const hotWeather = new Climate(23);
+const hotWeather = new Climate(12);
 
-console.log(hotWeather.whenNormal());
+console.log(hotWeather.whenwormer());
 
