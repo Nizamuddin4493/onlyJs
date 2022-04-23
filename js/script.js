@@ -691,11 +691,12 @@
 // myfunc.funcObject = 'fucntion as Object';
 // console.log(myfunc.funcObject);
 
-//       array distructring      
-let [val1, val2] = myArr;
-let [val1,  ,val2] = myArr;     // Use for scaping the value
-let [val1, val2, ...myArr5] = myArr;     // creating new Array for reminig values
-console.log(val1);
-console.log(val2);
-console.log(myArr5);
-
+/* ******* Class ******* */
+const class climate {
+  constructor(sunny,windy,cloudy,rainy) {
+    this.sunny = sunny;
+    this.windy = windy;
+    this.cloudy = cloudy;
+    this.rainy = rainy;
+  }  
+}
