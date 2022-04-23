@@ -705,24 +705,30 @@ class Climate {
   
   whenNormal() {
     if (this.temp >= 20 && this.temp <= 39) {
-       return `The temprature ${this.temp} is Greater then 20 and less then 39, so it is Normal.`;    
+      return `The temprature ${this.temp} is Greater then 20 and less then 39, so it is Normal.`;    
     }
   }
   
   whenwormer() {
     if (this.temp >= 5 && this.temp <= 19) {
-       return `The temprature ${this.temp} is Greater then 5 and less then 19, so it is wormer.`;    
+      return `The temprature ${this.temp} is Greater then 5 and less then 19, so it is wormer.`;    
     }
   }
   
   whencold() {
     if (this.temp < 5) {
-       return `The temprature ${this.temp} is less then 5, so it is cold.`;    
+      return `The temprature ${this.temp} is less then 5, so it is cold.`;    
     }
   }
 }
 
-const hotWeather = new Climate(2);
+const hotWeather = new Climate(42);
+const normalWeather = new Climate(22);
+const wornerWeather = new Climate(12);
+const coldWeather = new Climate(2);
 
-console.log(hotWeather.whencold());
+console.log(hotWeather.whenHot());
+console.log(normalWeather.whenNormal());
+console.log(wornerWeather.whenwormer());
+console.log(coldWeather.whencold());
 
