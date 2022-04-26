@@ -733,18 +733,27 @@
 // console.log(coldWeather.whencold());
 
 /* *********** ForEach Loop *********** */
- const myArr = [1, 2, 3, 4];
- function arrMultp(number, index) {
-   console.log(`The value of array is ${number} and index is  ${index}`);
- }
- arrMultp(myArr[2]);
+//  const myArr = [1, 2, 3, 4];
+//  function arrMultp(number, index) {
+//    console.log(`The value of array is ${number} and index is  ${index}`);
+//  }
+//  arrMultp(myArr[2]);
 
- for (let i = 0; i < myArr.length; i += 1) {
-   arrMultp(myArr[i], i);
- }
+//  for (let i = 0; i < myArr.length; i += 1) {
+//    arrMultp(myArr[i], i);
+//  }
 
- myArr.forEach(arrMultp); // OR
- myArr.forEach((number, index) => {
-   console.log(`The value of array is ${number} and index is  ${index}`);
+//  myArr.forEach(arrMultp); // OR
+//  myArr.forEach((number, index) => {
+//    console.log(`The value of array is ${number} and index is  ${index}`);
+//  });
+
+ const myDataArr = [
+   { firstName: 'Nizam', lastName: 'khan' },
+   { firstName: 'Ali', lastName: 'Nangarhari' },
+   { firstName: 'Mahmood', lastName: 'shah' },
+ ];
+ myDataArr.forEach((fname) => {
+   console.log(fname.firstName);
  });
 
