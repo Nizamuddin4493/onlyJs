@@ -692,43 +692,59 @@
 // console.log(myfunc.funcObject);
 
 /* ******* Class ******* */
-class Climate {
-  constructor(temp) {
-    this.temp = temp;
-  }
+// class Climate {
+//   constructor(temp) {
+//     this.temp = temp;
+//   }
 
-  whenHot() {
-    if(this.temp >= 40) {
-      return `The temprature ${this.temp} is Greater then 40, so it is hot.`;
-    }
-  }
+//   whenHot() {
+//     if(this.temp >= 40) {
+//       return `The temprature ${this.temp} is Greater then 40, so it is hot.`;
+//     }
+//   }
   
-  whenNormal() {
-    if (this.temp >= 20 && this.temp <= 39) {
-      return `The temprature ${this.temp} is Greater then 20 and less then 39, so it is Normal.`;    
-    }
-  }
+//   whenNormal() {
+//     if (this.temp >= 20 && this.temp <= 39) {
+//       return `The temprature ${this.temp} is Greater then 20 and less then 39, so it is Normal.`;    
+//     }
+//   }
   
-  whenwormer() {
-    if (this.temp >= 5 && this.temp <= 19) {
-      return `The temprature ${this.temp} is Greater then 5 and less then 19, so it is wormer.`;    
-    }
-  }
+//   whenwormer() {
+//     if (this.temp >= 5 && this.temp <= 19) {
+//       return `The temprature ${this.temp} is Greater then 5 and less then 19, so it is wormer.`;    
+//     }
+//   }
   
-  whencold() {
-    if (this.temp < 5) {
-      return `The temprature ${this.temp} is less then 5, so it is cold.`;    
-    }
-  }
-}
+//   whencold() {
+//     if (this.temp < 5) {
+//       return `The temprature ${this.temp} is less then 5, so it is cold.`;    
+//     }
+//   }
+// }
 
-const hotWeather = new Climate(42);
-const normalWeather = new Climate(22);
-const wornerWeather = new Climate(12);
-const coldWeather = new Climate(2);
+// const hotWeather = new Climate(42);
+// const normalWeather = new Climate(22);
+// const wornerWeather = new Climate(12);
+// const coldWeather = new Climate(2);
 
-console.log(hotWeather.whenHot());
-console.log(normalWeather.whenNormal());
-console.log(wornerWeather.whenwormer());
-console.log(coldWeather.whencold());
+// console.log(hotWeather.whenHot());
+// console.log(normalWeather.whenNormal());
+// console.log(wornerWeather.whenwormer());
+// console.log(coldWeather.whencold());
+
+/* *********** ForEach Loop *********** */
+ const myArr = [1, 2, 3, 4];
+ function arrMultp(number, index) {
+   console.log(`The value of array is ${number} and index is  ${index}`);
+ }
+ arrMultp(myArr[2]);
+
+ for (let i = 0; i < myArr.length; i += 1) {
+   arrMultp(myArr[i], i);
+ }
+
+ myArr.forEach(arrMultp); // OR
+ myArr.forEach((number, index) => {
+   console.log(`The value of array is ${number} and index is  ${index}`);
+ });
 
