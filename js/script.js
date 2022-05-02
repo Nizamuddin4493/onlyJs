@@ -767,4 +767,6 @@
   key3: 'value3',
   key4: 'value4',
  };
- const myObj3 = { ...myobj1, ...myObj2 };
+ // const myObj3 = { ...myobj1, ...myObj2 };
+ const myObj3 = { ...myobj1, ...myObj2, key5: 'value5' };
+ console.log(myObj3);
