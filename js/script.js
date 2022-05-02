@@ -748,12 +748,23 @@
 //    console.log(`The value of array is ${number} and index is  ${index}`);
 //  });
 
- const myDataArr = [
-   { firstName: 'Nizam', lastName: 'khan' },
-   { firstName: 'Ali', lastName: 'Nangarhari' },
-   { firstName: 'Mahmood', lastName: 'shah' },
- ];
- myDataArr.forEach((fname) => {
-   console.log(fname.firstName);
- });
+//  const myDataArr = [
+//    { firstName: 'Nizam', lastName: 'khan' },
+//    { firstName: 'Ali', lastName: 'Nangarhari' },
+//    { firstName: 'Mahmood', lastName: 'shah' },
+//  ];
+//  myDataArr.forEach((fname) => {
+//    console.log(fname.firstName);
+//  });
 
+
+/*      Spread operator in object        */
+ const myobj1 = {
+  key1: 'value1',
+   key2: 'value2',
+ };
+ const myObj2 = {
+  key3: 'value3',
+  key4: 'value4',
+ };
+ const myObj3 = { ...myobj1, ...myObj2 };
