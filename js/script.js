@@ -756,17 +756,3 @@
 //  myDataArr.forEach((fname) => {
 //    console.log(fname.firstName);
 //  });
-
-
-/*      Spread operator in object        */
- const myobj1 = {
-  key1: 'value1',
-   key2: 'value2',
- };
- const myObj2 = {
-  key3: 'value3',
-  key4: 'value4',
- };
- // const myObj3 = { ...myobj1, ...myObj2 };
- const myObj3 = { ...myobj1, ...myObj2, key5: 'value5' };
- console.log(myObj3);
