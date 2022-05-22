@@ -748,11 +748,3 @@
 //    console.log(`The value of array is ${number} and index is  ${index}`);
 //  });
 
-//  const myDataArr = [
-//    { firstName: 'Nizam', lastName: 'khan' },
-//    { firstName: 'Ali', lastName: 'Nangarhari' },
-//    { firstName: 'Mahmood', lastName: 'shah' },
-//  ];
-//  myDataArr.forEach((fname) => {
-//    console.log(fname.firstName);
-//  });
