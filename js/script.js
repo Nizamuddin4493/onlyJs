@@ -748,3 +748,8 @@
 //    console.log(`The value of array is ${number} and index is  ${index}`);
 //  });
 
+/************ Fetch API *************/
+
+const URL = "https://jsonplaceholder.typicode.com/posts";
+const fetchData =  fetch (URL);
+console.log(fetchData);
