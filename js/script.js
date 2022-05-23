@@ -752,4 +752,10 @@
 
 const URL = "https://jsonplaceholder.typicode.com/posts";
 const fetchData =  fetch (URL);
-console.log(fetchData);
+  .then(res => {
+    return res.json();
+  })
+  .then(data => {
+    console.log(data);
+  });
+
